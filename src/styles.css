@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+.form-control{
+  width: 25%;
+  background: gainsboro;
+}
+.form-group,h2{
+  padding-left: 40%;
+
+}
+body{
+  background: antiquewhite;
+  height: calc(93vh);
+}
+
+
