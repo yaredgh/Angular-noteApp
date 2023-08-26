@@ -32,6 +32,13 @@ export class UserService {
     return this.http.get(`http://localhost:3000/users/${userName}`);
   }
 
+  getCurrentUser():Observable<any>{
+    return this.http.get(`http://localhost:3000/login`);
+  }
+
+  removeUserByUserName(userName:string){
+    return this.http.delete(`http://localhost:3000/login/${userName}`);
+  }
 
   handleErrors(error: Error){
     return throwError(error)
