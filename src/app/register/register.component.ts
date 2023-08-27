@@ -10,9 +10,7 @@ import {
 } from "@angular/forms";
 import {Router} from "@angular/router";
 import {catchError, first, map, Observable} from "rxjs";
-import {UserService} from "../services/user-service";
-import {User} from "../user.model";
-import { of } from 'rxjs';
+import {AuthServiceService} from "../services/auth-service.service";
 
 @Component({
   selector: 'app-register',
@@ -22,7 +20,7 @@ import { of } from 'rxjs';
 export class RegisterComponent implements OnInit {
 
   constructor(
-    private userService: UserService,
+    private userService: AuthServiceService,
     private formBuilder: FormBuilder,
     private router: Router,
   ) {
@@ -87,7 +85,7 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     } else {
-      this.userService.register(this.registerForm.value)
+      this.userService.signUp(this.registerForm.value)
         .pipe(first())
         .subscribe(
           data => {

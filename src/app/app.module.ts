@@ -9,7 +9,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {UserService} from "./services/user-service";
 import { HomeComponent } from './home/home.component';
 
 
@@ -39,7 +38,7 @@ const routes: Routes = [
     HttpClientModule,
     MatToolbarModule,
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

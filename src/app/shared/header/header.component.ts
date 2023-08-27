@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {UserService} from "../../services/user-service";
 import {User} from "../../user.model";
+import {AuthServiceService} from "../../services/auth-service.service";
 
 @Component({
   selector: 'app-header',
@@ -9,19 +9,15 @@ import {User} from "../../user.model";
 })
 export class HeaderComponent {
 
-  constructor(private userService: UserService) {
+  constructor(private authServiceService:AuthServiceService) {
   }
 
-  logout(){
-   let currentUser ;
-   console.log('called ')
-    this.userService.getCurrentUser().subscribe(data=>{
-       data.map((user : User)=>{
-         currentUser = user.username;
-     })
-    })
-    if(currentUser){
-      this.userService.removeUserByUserName(currentUser);
-    }
+  logOff(){
+    this.authServiceService.doLogout();
   }
+
+  isLogin(){
+    this.authServiceService.isLoggedIn;
+  }
+
 }

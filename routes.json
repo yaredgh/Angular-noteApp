@@ -1,0 +1,7 @@
+{
+  "/api/users": "/users",
+  "/api/login": "/login",
+  "/api/login/:id": "/login/:id",
+ "/api/users/:id": "/users/:id",
+  "/api/users/:username": "/users/:username"
+}
