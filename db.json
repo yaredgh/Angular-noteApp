@@ -1,38 +1,8 @@
 {
   "users": [
-    {
-      "username": "yared",
-      "password": "1234567",
-      "confirmPassword": "1234567",
-      "id": 1
-    },
-    {
-      "username": "yaa",
-      "password": "1234567",
-      "confirmPassword": "1234567",
-      "id": 2
-    }
+
   ],
   "login": [
-    {
-      "username": "yaa",
-      "password": "1234567",
-      "id": 1
-    },
-    {
-      "username": "yaa",
-      "password": "1234567",
-      "id": 2
-    },
-    {
-      "username": "yaa",
-      "password": "1234567",
-      "id": 3
-    },
-    {
-      "username": "yaa",
-      "password": "1234567",
-      "id": 4
-    }
+
   ]
 }
