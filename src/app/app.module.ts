@@ -10,6 +10,11 @@ import {HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { HomeComponent } from './home/home.component';
+import { NoteDetailComponent } from './note-detail/note-detail.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {NotesService} from "./services/notes-service.service";
+import {MatCardModule} from "@angular/material/card";
 
 
 const routes: Routes = [
@@ -28,7 +33,8 @@ const routes: Routes = [
     LoginComponent,
     NoteComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    NoteDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -37,8 +43,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     MatToolbarModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatCardModule,
   ],
-  providers: [],
+  providers: [NotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

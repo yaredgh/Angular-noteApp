@@ -1,8 +1,17 @@
 {
   "users": [
-
+    {
+      "username": "ya",
+      "password": "1234567",
+      "confirmPassword": "1234567",
+      "id": 1
+    }
   ],
   "login": [
-
+    {
+      "username": "ya",
+      "password": "1234567",
+      "id": 1
+    }
   ]
 }

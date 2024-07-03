@@ -28,3 +28,26 @@
     <a class="nav-link" href=" " tabindex="-1"> register</a>
   </li>
 </mat-toolbar>
+<div class="header-container">
+  <div class="icon-container">
+    <mat-icon matTooltip='Toggle Sidebar' (click)="toggleHandler()">web</mat-icon>
+    <mat-icon
+      class="delete-icon"
+      [ngClass]="selectedNote? 'selected': ''"
+      [ngClass]="disableEditing? 'disable-editing': ''"
+      matTooltip='Delete Note'
+      (click)="deleteNoteHandler()">delete
+    </mat-icon>
+    <mat-icon
+      [ngClass]="disableEditing? 'disable-editing': ''"
+      matTooltip='Create New Note'
+      (click)="addEditNoteHandler()">edit
+    </mat-icon>
+    <mat-icon *ngIf="!disableEditing" matTooltip='Disable Editing' (click)="disableEditingHandler()">lock</mat-icon>
+    <mat-icon *ngIf="disableEditing" matTooltip='Enable Editing' (click)="disableEditingHandler()">lock_open</mat-icon>
+  </div>
+  <div class="search-bar">
+    <mat-icon>search</mat-icon>
+    <input type="text" placeholder="Search" (keyup)="searchHandler(searchInput)" #searchInput />
+  </div>
+</div>

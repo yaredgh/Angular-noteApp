@@ -1,32 +1,11 @@
-<h1>New Note</h1>
-<form [formGroup]="noteForm">
-  <div class="form-group">
-
-      <textarea formControlName="title" >
-      </textarea>
-    <div *ngIf="noteForm.controls['title'].hasError('required')">
-      A title is required.
+<mat-card class="note" [ngClass]="note.selected? 'selected': ''" (click)="noteClickHandler()">
+  <div class="note-title">{{note.title}}</div>
+  <div class="note-detail">
+    <div class="note-date">
+      {{note.date}}
     </div>
-    <div *ngIf="noteForm.controls['title'].hasError('maxlength')">
-      The title must be less than 255 characters.
+    <div class="note-body">
+      {{note.body}}
     </div>
-
-
-
-    <textarea
-      formControlName="body">
-    </textarea>
-      <div *ngIf="noteForm.controls['body'].hasError('required')">
-        The note's content is required.
-      </div>
-      <div *ngIf="noteForm.controls['body'].hasError('maxlength')">
-        The note's content must be less than 1024 characters.
-      </div>
-
-
-
   </div>
-<!--  <mat-dialog-actions align="end">-->
-    <button >Save</button>
-
-</form>
+</mat-card>
